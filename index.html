@@ -4,32 +4,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
     <main class="background">
-        <div class="title">
+        <section class="title">
             <h1>Tic Tac Toe</h1>
-        </div>
-        <div class="display">
+        </section>
+        <section class="display">
             Player <span class="display-player playerX">X</span>'s turn
+        </section>
+        <table>
+            <tr>
+               <!--First Child-->
+                <td class="cell" id="0"></td>
+                <td class="cell" id="1"></td>
+                <td class="cell" id="2"></td>
+            </tr>
+             <tr>
+                <!--Second Child-->
+                <td class="cell" id="3"></td>
+                <td class="cell" id="4"></td>
+                <td class="cell" id="5"></td>
+            </tr>
+             <tr>
+                <!--Third Child-->
+                <td class="cell" id="5"></td>
+                <td class="cell" id="6"></td>
+                <td class="cell" id="7"></td>
+             </tr>
+        </table>
+        <div class="endgame"> 
+            <div class="text"></div>
         </div>
-        <div class="container">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-        <div class="game-over">
-            <span class="game-over-text"></span>
-            <button class="restart">Restart</button>
-        </div>
+        <button onclick="startGame()">Play Again?</button>
+        <script src="index.js"></script>
     </main>
 </body>
 </html>
