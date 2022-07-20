@@ -14,31 +14,22 @@
         <section class="display">
             Player <span class="display-player playerX">X</span>'s turn
         </section>
-        <table>
-            <tr>
-               <!--First Child-->
-                <td class="cell" id="0"></td>
-                <td class="cell" id="1"></td>
-                <td class="cell" id="2"></td>
-            </tr>
-             <tr>
-                <!--Second Child-->
-                <td class="cell" id="3"></td>
-                <td class="cell" id="4"></td>
-                <td class="cell" id="5"></td>
-            </tr>
-             <tr>
-                <!--Third Child-->
-                <td class="cell" id="5"></td>
-                <td class="cell" id="6"></td>
-                <td class="cell" id="7"></td>
-             </tr>
-        </table>
-        <div class="endgame"> 
-            <div class="text"></div>
-        </div>
-        <button onclick="startGame()">Play Again?</button>
-        <script src="index.js"></script>
+        <section class="container">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </section>
+        <section class="display announcer hide"></section>
+        <section class="controls">
+            <button id="reset">Reset</button>
+        </section>
+        <script src="code.js"></script>
     </main>
 </body>
 </html>

@@ -1,77 +1,59 @@
 h1 {
-    padding: 0;
-    margin: 0;
     font-family: 'Itim', cursive;
-    color: white;
 }
 
-body {
+.background {
     background: linear-gradient(to right, #09C372, #4e53ba); 
- }
+}
 
- 
+
 .title {
-    color: white;
+    color: rgb(40, 49, 113);
     text-align: center;
-    font-size: 40px;
-    margin-top: 10%;
+    font-size: 100px;
+    margin-top: 0%;
 }
 
 .display {
-    color: white;
     font-size: 25px;
     text-align: center;
-    margin-top: 1em;
-    margin-bottom: 0em;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-td {
-    border: 2px solid black;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    vertical-align: middle;
-    font-family: Itim; cursive;
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40% 40% 40%;
+    grid-template-rows: 40% 40% 40%;
+    max-width: 300px;
+
+}
+
+.tile {
+    border: solid black;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
     cursor: pointer;
 }
 
-table {
-    border-collapse: collapse;
-    position: absolute;
-    left: 50%;
-    margin-left: -155px;
-    top: 400px;
+.playerX {
+    color: #4ed355;
 }
 
-table tr:first-child td {
-    border-top: 0;
+.playerO {
+    color: #1f21ac;
 }
 
-table tr:last-child td {
-    border-bottom: 0;
+.restart {
+    background-color: #498AFB;
 }
 
-table tr td:first-child {
-    border-left:0;
+#reset {
+    background-color: #FF3860;
 }
-
-table tr td:last-child {
-    border-right: 0;
-}
-
-.endgame {
-    display: none;
-    width: 200px;
-    top: 120px;
-    background-color: red;
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-size: 2em;
-}
-
