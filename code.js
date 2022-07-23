@@ -26,7 +26,7 @@ function tileClicked(e) {
             playerText = '${currentPlayer} has won!'
             let winning_square = playerHasWon()
            
-            winning_square.map( back=> tiles[tile].style.backgroundColor=winnerIndicator)
+            winning_square.map( tile => tiles[tile].style.backgroundColor=winnerIndicator)
             return
         }
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
