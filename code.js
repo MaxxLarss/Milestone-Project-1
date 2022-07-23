@@ -1,14 +1,13 @@
-// variable
+// variables
 let playerText = document.getElementById('playerText')
 let resetBtn = document.getElementById('resetBtn')
 let tiles = Array.from(document.getElementsByClassName('tile'))
-
-let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--winning-square')
 
 const O_TEXT = "O"
 const X_TEXT = "X"
 let currentPlayer = X_TEXT
 let spaces = Array(9).fill(null)
+
 
 const startGame = () => {
     tiles.forEach(tile => tile.addEventListener('click', tileClicked))
@@ -22,19 +21,18 @@ function tileClicked(e) {
         spaces[id]= currentPlayer
         e.target.innerText = currentPlayer
 
-        if(playerHasWon()!==false){
+        if(playerHasWon() !==false){
             playerText = '${currentPlayer} has won!'
-            let winning_square = playerHasWon()
-           
-            winning_square.map( tile => tiles[tile].style.backgroundColor=winnerIndicator)
-            return
+            let winning_blocks = playerHasWon()
         }
+
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
     }
 }
 
+
 //Showing on tic tac toe board of combinations of winning
-const winningPoint = [
+const winningCombinations = [
     [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -42,11 +40,12 @@ const winningPoint = [
     [1,4,7],
     [2,5,8],
     [0,4,8],
-    [2,4,6]
+    [2,4,6],
 ]
 
+// Arranging array of the winningPoint from above to a,b,c
 function playerHasWon() {
-    for (const condition of winningPoint) {
+    for (const condition of winningCombinations) {
         let [a, b, c] = condition
 
         if(spaces[a] && (spaces[a] == spaces[b] && spaces[a] == spaces[c])) {
@@ -65,8 +64,6 @@ function reset() {
     tiles.forEach(tile => {
         tile.innerText = ''
     })
-
-    playerText= 'Tic Tac Toe'
     currentPlayer = X_TEXT
 }
 
