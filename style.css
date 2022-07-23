@@ -1,6 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 h1 {
     text-align: center;
-    margin: 0%;
+    margin: 4%;
     line-height: 5em;
     font-family: 'Itim', cursive;
     color:rgb(80, 27, 186);
@@ -31,18 +37,26 @@ body {
     cursor: pointer;
 }
 
+
+
 .button {
     position: bottom, center;
     color: black;
     font-family: bold, 'Times New Roman', Times, serif;
     background-color: red;
     border-radius: 8px;
-    margin: 20%;
-    margin-left: 5%;
+    margin: 4%;
+    margin-right: 13%;
     padding: 10px;
     font-size: 1.5em;
     position: relative;
     left: 100px;
+
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
 }
 
 .hidden {
