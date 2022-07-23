@@ -4,32 +4,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Tic-Tac-Toe</title>
+    <title>Tic Tac Toe</title>
 </head>
 <body>
-    <main class="background">
-        <section class="title">
-            <h1>Tic Tac Toe</h1>
-        </section>
-        <section class="display">
-            Player <span class="display-player playerX">X</span>'s turn
-        </section>
-        <section class="container">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </section>
-        <section class="display announcer hide"></section>
-        <section class="controls">
-            <button id="reset">Reset</button>
-        </section>
-        <script src="code.js"></script>
-    </main>
+    <h1>Tic Tac Toe</h1>
+    <section class="board">
+        <div data-index= "1" class="tile"></div>
+        <div data-index= "2" class="tile"></div>
+        <div data-index= "3" class="tile"></div>
+        <div data-index= "4" class="tile"></div>
+        <div data-index= "5" class="tile"></div>
+        <div data-index= "6" class="tile"></div>
+        <div data-index= "7" class="tile"></div>
+        <div data-index= "8" class="tile"></div>
+        <div data-index= "9" class="tile"></div>
+        <div id="game-over" class="hidden"></div>
+    <button type="button" class="button">Reset</button>
+    <script src="code.js"></script>
 </body>
 </html>
